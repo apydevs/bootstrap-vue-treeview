@@ -357,6 +357,7 @@
             endRenaming() {
                 this.data[this.labelProp] = this.renameNewLabel
                 this.renaming = false
+                EventBus.$emit('renameEnded', this.renameNewLabel)
             },
             dblClickLabel() {
                 if (this.renameOnDblClick) {
